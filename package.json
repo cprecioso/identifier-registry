@@ -1,0 +1,49 @@
+{
+  "name": "@cprecioso/identifier-registry",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "description": "Registry of identifiers, like a scope",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cprecioso/identifier-registry.git"
+  },
+  "homepage": "https://github.com/cprecioso/identifier-registry#readme",
+  "bugs": {
+    "url": "https://github.com/cprecioso/identifier-registry/issues"
+  },
+  "author": "Carlos Precioso",
+  "license": "ISC",
+  "engines": {
+    "node": ">=14"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "rollup --config",
+    "postinstall": "husky install",
+    "postpack": "pinst --enable",
+    "prepack": "$npm_execpath run build && pinst --disable"
+  },
+  "dependencies": {
+    "@babel/types": "^7.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "organize-imports-cli": "^0.9.0",
+    "pinst": "^3.0.0",
+    "prettier": "^2.5.1",
+    "prettier-plugin-pkg": "^0.11.1",
+    "rollup": "^2.69.2",
+    "rollup-plugin-ts": "^2.0.5",
+    "typescript": "^4.6.2"
+  },
+  "packageManager": "yarn@3.2.0",
+  "volta": {
+    "node": "16.14.0"
+  }
+}
