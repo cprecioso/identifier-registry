@@ -9,7 +9,10 @@ const external = [...builtinModules, ...Object.keys(pkg.dependencies)]
 
 export default defineConfig({
   input: "src/index.ts",
-  output: { dir: "dist", format: "esm", entryFileNames: "[name].mjs" },
+  output: [
+    { dir: "dist", format: "esm", entryFileNames: "[name].mjs" },
+    { dir: "dist", format: "cjs" },
+  ],
   plugins: [ts({ typescript: require("typescript") })],
   external,
 })
