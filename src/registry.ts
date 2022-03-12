@@ -7,6 +7,11 @@ export class IdentifierRegistry implements Iterable<string> {
     yield* this._registeredIdentifiers
   }
 
+  has(name: string) {
+    const identifier = asValidIdentifier(name)
+    return this._registeredIdentifiers.has(identifier)
+  }
+
   add(name: string) {
     const baseIdentifier = asValidIdentifier(name)
     let identifier = baseIdentifier
