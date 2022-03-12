@@ -1,6 +1,6 @@
 {
   "name": "@cprecioso/identifier-registry",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "type": "commonjs",
   "description": "Registry of identifiers, like a scope",
   "repository": {
